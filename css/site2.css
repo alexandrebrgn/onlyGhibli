@@ -1,0 +1,22 @@
+body {
+    background-color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    height: 50px;
+    margin: 0;
+}
+
+.text {
+    color: black;
+}
+
+.fleche-gauche {
+    height: 20px;
+}
+
+.fleche-droite {
+}

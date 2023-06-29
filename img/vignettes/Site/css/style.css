@@ -1,0 +1,21 @@
+.titre  {
+  font-variant: small-caps;
+}
+
+p {
+  font-weight: bolder;
+  font-family: emoji;
+}
+
+.Button {
+  color: #0B6E1A;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 16px;
+  border: green solid 3px;
+  border-radius: 5px;
+}

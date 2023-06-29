@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+* {
+	font-family: "Montserrat", sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}	
+
+html {
+	scroll-behavior: smooth	;
+}
+
+.top-page {
+	background-image: url("../img/backgrounds/back2.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+
+/*__________________HEADER___________________*/
+
+.header {
+	display: flex;
+	align-items: center;
+	padding: 25px;
+}
+.header img {
+	height: 90px;
+	padding: 10px;
+}
+
+/*___________________NAVIGATION_______________*/
+
+.navigation {
+    margin-left: 80px;
+	width: 500px;
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+}
+
+.navigation a{
+	color: white;
+	font-size: 20px;
+	text-decoration: none;
+	filter: drop-shadow(5px 5px 4px black);
+}
+
+.navigation a:hover {
+	text-decoration: underline;
+}
+
+/*__________________GRAND TEXT_______________*/
+
+.landing-page {
+	padding-top: 0px;
+	padding-left: 110px;
+	width: 700px;
+	min-height: 400px;
+	color: white;
+	font-size: 60px;
+	position: relative;
+}
+
+.scroll {
+	position: absolute;
+	color: white;
+	font-size: 20px;
+	text-decoration: none;
+	font-weight: normal;
+	bottom: 0;
+}
+
+.landing-page h1{
+ 	font-family:"Abril Fatface", sans-serif;
+ 	font-weight: 100;
+ 	filter: drop-shadow(10px 10px 20px black);
+}
+
+.middle-page {
+	max-width: 800px;
+	min-height: 200px;
+}
+
+.OnlyGhibli {
+	font-family:"Abril Fatface", sans-serif;
+ 	font-weight: 100;
+	text-decoration: underline;
+}
+
+ /*_______________SERVICES___________________________*/
+
+.service {
+ 	display: flex;
+ 	justify-content: space-between;
+ 	margin: 50px;
+	padding-top: 40px;
+	padding-left: 100px;
+	padding-right: 100px;
+	margin-top: 0;
+}
+
+.service-item {
+ 	display: flex;
+ 	align-items: center;
+ 	flex-direction: column;
+}
+
+.service-text {
+	font-weight: 600;
+	text-align: center;
+}
+
+.delivery-icon {
+ 	font-size: 50px;
+ 	color: #00AFF0;
+}
+
+/*_______________GHIBLI__________________*/
+
+.best-items {
+	margin: 50px;
+}
+
+.section-title {
+	font-size: 50px;
+	font-family: "Abril Fatface", cursive;
+	font-weight: 100;
+	position: relative;
+}
+
+.section-title::before {
+	content: "";
+	position: absolute;
+	background-color: #00AFF0;
+	width: 70px;
+	height: 4px;
+	bottom: 0;
+}
+
+.best-ghibli {
+	min-height: 500px;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3px;
+	justify-content:space-between;
+}
+
+.ghibli-box {
+	height: 450px;
+	min-width: 300px;
+	position: relative ;
+	background-size: cover;
+	background-position: center;
+	flex: 0.8;
+}
+
+.ghibli1 {
+	background-image: url("../img/vignettes/ghibli1.jpg");
+}
+
+.ghibli2 {
+	background-image: url("../img/vignettes/ghibli2.jpg");
+}
+
+.ghibli3 {
+	background-image: url("../img/vignettes/Ghibli7.jpg");
+}
+
+.ghibli4 {
+	background-image: url("../img/vignettes/ghibli4v2.jpg");
+}
+
+.ghibli-details {
+	background-color: #FFFFFFAF;
+	width: 100%;
+	color: #000000;
+	position: absolute;
+	bottom: 0;
+	border-bottom:#00AFF0 solid 4px;
+	text-align: center;
+	font-size: 20px;
+}
+
+/*________________footer________________*/
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 20px 100px;
+	font-weight: 600;
+}
+
+footer a.cgv {
+	text-decoration: none;
+	color: black;
+
+}

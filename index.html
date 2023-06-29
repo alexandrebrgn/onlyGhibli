@@ -1,33 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style-index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> 
-    <link rel="icon" href="images/licone.png">
-    <title>WebDesign.</title>
-</head>
+<html lang="fr" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>OnlyGhibli</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/icons/nekobus-icon.png	">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+	</head>
+
+	<body>
+		<section class="top-page">
+			<header class="header">
+				<a href="index.html"><img src="img/logo.png"></a>
+				<nav class="navigation">
+					<li><a href="index.html">Accueil</a></li>
+					<li><a href="#best-items">Quelques images</a></li>
+					<li><a href="image2.html">Site 2</a></li>
+				</nav>
+			</header>
+			<section class="landing-page">
+				<div class="middle-page">
+					<h1>Bienvenue sur ma page <span class="OnlyGhibli">OnlyGhibli</span></h1>
+				</div>
+				<a class="scroll" href="#service">Scroll <i class="fas fa-angle-down"></i></a>
+			</section>
+		</section>
+			
+		<section class="service" id="service">
+			<div class="service-item">
+				<i class="fas fa-store delivery-icon"></i>
+				<p class="service-text">Regarde cette belle devanture.</p>
+			</div>
+			<div class="service-item">
+				<i class="fas fa-star delivery-icon"></i>
+				<p class="service-text">Tiens je te donne le colis.</p>
+			</div>
+			<div class="service-item">
+				<i class="fas 	fa-truck delivery-icon"></i>
+				<p class="service-text">La voiture qui livre.</p>
+			</div>
+		</section>
 
 
-<body>
-    <div class="menu">
-        <h1 class="titre">Aimé le gentil.</h1>
-        <a href="index.html">Accueil</a>
-        <a href="page2.html">2ème page.</a>
-        <a>3ème page.</a>
-    </div>
-    <div class="container">
-        <img class="big-avatar" src="images/b58.gif" alt="l'image">
-        <img class="big-avatar" src="images/icegif-351.gif" alt="l'image">
-        <img class="big-avatar" src="images/nerd.gif" alt="l'image">
-    </div>
-    <h2 class="h2-carte">La carte en question :</h2>
-    <div class="carte">
-        <h2 class="titre-carte">Ca c'est la carte.</h2>
-    </div>
-</body>
+		<section class="best-items" id="best-items">
+			<h2 class="section-title">
+				Quelques Images
+			</h2>
+			<div class="best-ghibli">
+				<a href="html/attachement-1.html" class="ghibli-box ghibli1">
+					<div class="ghibli-details">
+						<p class="ghibli-name">The two on the boat</p>
+					</div></a>
+				<a href="html/attachement-2.html " class="ghibli-box ghibli2">
+					<div class="ghibli-details">
+						<p class="ghibli-name">Marnie</p>
+					</div></a>
+				<a href="html/attachement-3.html" class="ghibli-box ghibli3">
+					<div class="ghibli-details">
+						<p class="ghibli-name">Chihiro</p>
+					</div></a>
+				<a href="html/attachement-4.html" class="ghibli-box ghibli4">
+					<div class="ghibli-details">
+						<p class="ghibli-name">Hauru</p>
+					</div></a>
+			</div>
+		</section>
+		<footer>
+			<p class="copyright">&copy; 2020 - OnlyGhibli</p>
+			<a href="html/cgv.html" class="cgv"> Condition générales de ventes</a>
+		</footer>
+	</body>
 </html>
