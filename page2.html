@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel=stylesheet href="style/style-page2.css">
+    <link rel="icon" href="images/site2/lune_icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><- c la lune</title>
+</head>
+<body>
+    <section id="accueil">
+        <img src="images/site2/bg.jpg" id="bg">
+        <img src="images/site2/moon.png" id="moon">
+        <img src="images/site2/mountain.png" id="mountain">
+        <img src="images/site2/road.png" id="road">
+        <h2 id="text">Bonsoir à tous.</h2>
+        <a href="#scroll_up" id="scroll_down">Scroll down.</a>
+    </section>
+    <div class="scroller">
+        <a href="#accueil" id="scroll_up">Scroll</a>
+        <img src="images/site2/down-icon.png" id="down-icon">
+    </div>
+    <script type="text/javascript">
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon");
+        let mountain = document.getElementById("mountain");
+        let road = document.getElementById("road");
+        let text = document.getElementById("text");
+        let scroll_down = document.getElementById("scroll_down");
+
+        window.addEventListener('scroll', function(){
+            var value = window.scrollY;
+
+            bg.style.top = value * 0.5 + 'px'
+            moon.style.left = -value *0.5 + 'px'
+            mountain.style.top = -value * 0.15 + 'px'
+            text.style.top = value * 0.5 + 'px'
+            scroll_down.style.top = value * 0.5 + 'px'
+        })
+    </script>
+</body>
+</html>
