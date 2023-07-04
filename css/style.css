@@ -1,14 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
+@font-face {
+    font-family: customFont;
+    src : url('../fonts/autumn-in-november/Autumn\ in\ November.ttf')
+}
+
 * {
 	font-family: "Montserrat", sans-serif;
-	box-shadow: 0 0 0 3px red inset; 
+	/* box-shadow: 0 0 0 1px red inset;  */
 }
 
 body {
 	margin: 0;
 	padding: 0;
+}
+
+body::-webkit-scrollbar {
+	width: 0.3em;
+	background-color: #00b0f0;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #FFFFFF;
+	;
 }
 
 html {
@@ -38,18 +53,19 @@ html {
 .header {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	padding: 25px;
 }
 
 .header img {
-	height: 90px;
+	height: 70px;
 	padding: 10px;
 }
 
 /*___________________NAVIGATION_______________*/
 
 .navigation {
-	margin-left: 80px;
+	margin-right: 80px;
 	width: 500px;
 	display: flex;
 	justify-content: space-between;
@@ -141,7 +157,7 @@ html {
 
 .section-title {
 	font-size: 50px;
-	font-family: "Abril Fatface", cursive;
+	font-family: "customFont", cursive;
 	font-weight: 100;
 	position: relative;
 }
@@ -150,9 +166,9 @@ html {
 	content: "";
 	position: absolute;
 	background-color: #00AFF0;
-	width: 70px;
+	width: 90px;
 	height: 4px;
-	bottom: 0;
+	top: 110%;
 }
 
 .best-ghibli {

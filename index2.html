@@ -1,32 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/sitetest.css">
-    <title>Document</title>
-    <script>
-        window.addEventListener('scroll', function () {
-            var parallax = document.querySelector('.parallax');
-            var parallax_titre = document.querySelector('.parallax-content')
-            var offsetY = window.pageYOffset;
-            parallax.style.backgroundPositionY = offsetY * -0.3 + 'px'; // Ajustez la valeur (0.7) pour changer la vitesse de défilement
-            parallax_titre.style.backgroundPositionY = offsetY * -0.8 + 'px';
-        });
-    </script>
+    <title>Scrolling Background</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
 <body>
-    <div class="parallax">
-        <div class="parallax-content">
-            <h1>Titre</h1>
-            <a href="#temp"> OUI</a>
-        </div>
+    <div id="background"></div>
+    <div id="content">
+        <h1>Contenu de la page</h1>
+        <p>Ceci est un exemple de page avec un fond d'écran qui se répète en continu lorsque vous faites défiler la page.</p>
     </div>
-    <div class="temp" id="temp">
 
-    </div>
+    <script src="script.js"></script>
 </body>
-
 </html>

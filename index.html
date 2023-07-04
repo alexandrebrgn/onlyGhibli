@@ -7,6 +7,7 @@
 	<title>OnlyGhibli</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="icon" type="image/png" sizes="16x16" href="img/icons/nekobus-icon.png	">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
 	<script>
 		window.addEventListener('scroll', function () {
 			var parallax = document.querySelector('.top-page');
@@ -17,70 +18,72 @@
 </head>
 
 <body>
-	<div class="top-page">
-		<header class="header">
-			<a href="index.html"><img src="img/logo.png"></a>
-			<nav class="navigation">
-				<li><a href="index.html">Accueiffffl</a></li>
-				<li><a href="#best-items">Quelques images</a></li>
-				<li><a href="index2.html">Site 2</a></li>
-			</nav>
-		</header>
-		<section class="landing-page">
-			<div class="middle-page">
-				<h3 class="titre">Bienvenue sur ma page <span class="OnlyGhibli">OnlyGhibli</span></h3>
+	<div id="background">
+		<div class="top-page">
+			<header class="header">
+				<a href="index.html"><img src="img/logo.png"></a>
+				<nav class="navigation">
+					<li><a href="index.html">Accueil</a></li>
+					<li><a href="#best-items">Quelques images</a></li>
+					<li><a href="index2.html">Site 2</a></li>
+				</nav>
+			</header>
+			<section class="landing-page">
+				<div class="middle-page">
+					<h3 class="titre">Bienvenue sur ma page <span class="OnlyGhibli">OnlyGhibli</span></h3>
+				</div>
+				<a class="scroller" href="#service">Scroll <i class="fas fa-angle-down"></i></a>
+			</section>
+		</div>
+
+		<section class="service" id="service">
+			<div class="service-item">
+				<i class="fas fa-store delivery-icon"></i>
+				<p class="service-text">Regarde cette belle devanture.</p>
 			</div>
-			<a class="scroller" href="#service">Scroll <i class="fas fa-angle-down"></i></a>
+			<div class="service-item">
+				<i class="fas fa-star delivery-icon"></i>
+				<p class="service-text">Tiens je te donne le colis.</p>
+			</div>
+			<div class="service-item">
+				<i class="fas 	fa-truck delivery-icon"></i>
+				<p class="service-text">La voiture qui livre.</p>
+			</div>
 		</section>
+
+
+		<section class="best-items" id="best-items">
+			<h2 class="section-title">
+				Quelques Images
+			</h2>
+			<div class="best-ghibli">
+				<a href="html/attachement-1.html" class="ghibli-box ghibli1">
+					<div class="ghibli-details">
+						<p class="ghibli-name">The two on the boat</p>
+					</div>
+				</a>
+				<a href="html/attachement-2.html " class="ghibli-box ghibli2">
+					<div class="ghibli-details">
+						<p class="ghibli-name">Marnie</p>
+					</div>
+				</a>
+				<a href="html/attachement-3.html" class="ghibli-box ghibli3">
+					<div class="ghibli-details">
+						<p class="ghibli-name">Chihiro</p>
+					</div>
+				</a>
+				<a href="html/attachement-4.html" class="ghibli-box ghibli4">
+					<div class="ghibli-details">
+						<p class="ghibli-name">Hauru</p>
+					</div>
+				</a>
+			</div>
+		</section>
+		<footer>
+			<p class="copyright">&copy; 2020 - OnlyGhibli</p>
+			<a href="html/cgv.html" class="cgv"> Condition générales de ventes</a>
+		</footer>
 	</div>
-
-	<section class="service" id="service">
-		<div class="service-item">
-			<i class="fas fa-store delivery-icon"></i>
-			<p class="service-text">Regarde cette belle devanture.</p>
-		</div>
-		<div class="service-item">
-			<i class="fas fa-star delivery-icon"></i>
-			<p class="service-text">Tiens je te donne le colis.</p>
-		</div>
-		<div class="service-item">
-			<i class="fas 	fa-truck delivery-icon"></i>
-			<p class="service-text">La voiture qui livre.</p>
-		</div>
-	</section>
-
-
-	<section class="best-items" id="best-items">
-		<h2 class="section-title">
-			Quelques Images
-		</h2>
-		<div class="best-ghibli">
-			<a href="html/attachement-1.html" class="ghibli-box ghibli1">
-				<div class="ghibli-details">
-					<p class="ghibli-name">The two on the boat</p>
-				</div>
-			</a>
-			<a href="html/attachement-2.html " class="ghibli-box ghibli2">
-				<div class="ghibli-details">
-					<p class="ghibli-name">Marnie</p>
-				</div>
-			</a>
-			<a href="html/attachement-3.html" class="ghibli-box ghibli3">
-				<div class="ghibli-details">
-					<p class="ghibli-name">Chihiro</p>
-				</div>
-			</a>
-			<a href="html/attachement-4.html" class="ghibli-box ghibli4">
-				<div class="ghibli-details">
-					<p class="ghibli-name">Hauru</p>
-				</div>
-			</a>
-		</div>
-	</section>
-	<footer>
-		<p class="copyright">&copy; 2020 - OnlyGhibli</p>
-		<a href="html/cgv.html" class="cgv"> Condition générales de ventes</a>
-	</footer>
 </body>
 
 </html>
