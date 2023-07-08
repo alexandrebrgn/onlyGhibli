@@ -30,6 +30,22 @@ html {
 	scroll-behavior: smooth;
 }
 
+/*-----------------Fonctions générales-------------------*/
+
+.hidden {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+
+/*-------------------------------------------------------*/
+
 .top-page {
 	background-image: url("../img/backgrounds/back2.jpg");
 	background-attachment: fixed;
@@ -127,6 +143,7 @@ html {
 	display: flex;
 	justify-content: space-between;
 	margin: 50px;
+	margin-bottom: 40px;
 	padding-top: 40px;
 	padding-left: 100px;
 	padding-right: 100px;
@@ -144,15 +161,100 @@ html {
 	text-align: center;
 }
 
-.delivery-icon {
-	font-size: 50px;
+.service-icon {
+	font-size: 40px;
 	color: #00AFF0;
+}
+
+/*_______________Oeuvres_________________*/
+
+.oeuvres {
+	margin: 40px;
+}
+
+.slider {
+	height: 450px;
+	position: relative;
+	margin: auto;
+	overflow: hidden;
+	width: 100%;
+}
+
+.slider:hover > .slide-track{
+	animation-play-state: paused;
+}
+
+.slide-track {
+	animation: scroll 10s linear infinite;
+	display: flex;
+	gap: 5px;
+	width: 100%;
+}
+
+.slider::before {
+	position: absolute;
+	background: linear-gradient(to right,  rgb(255, 255, 255) 0%, transparent 100%);
+	content:"";
+	height: 100%;
+	width: 5%;
+	top:0;
+	left:0;
+	z-index:2;
+}
+
+.slider::after {
+	position: absolute;
+	background: linear-gradient(to left,  rgb(255, 255, 255) 0%,rgba(255, 255, 255, 0) 100%);
+	content:"";
+	height: 100%;
+	width: 5%;
+	top:0;
+	right:0;
+	z-index:2;
+}
+
+.slide-element {
+	height: 450px;
+	position: relative;
+	border-radius: 10px;
+}
+
+.slide-element:hover > .slide-element-titre {
+	transition: all .5s;
+	transform: scale(1.2)
+}
+
+.slide-element:hover > .slide-affiche-film {
+	transform: scale(1.1) rotate(10deg);
+	transition: all .5s;
+}
+
+.slide-element-titre {
+	position: absolute;
+	color: white;
+	left: 75px;
+	top: 100px;
+	text-align: center;
+	filter: drop-shadow(5px 5px 4px black);
+}
+
+.slide-affiche-film {
+	position: absolute;
+	right: 75px;
+	top: 75px;
+	filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+	border-radius: 10px;
+}
+
+@keyframes scroll {
+	0% {transform: translateX(0); }
+	100% {transform: translateX(calc(-800px * 4 - 40px))}
 }
 
 /*_______________GHIBLI__________________*/
 
 .best-items {
-	margin: 50px;
+	margin: 40px;
 }
 
 .section-title {
@@ -173,7 +275,7 @@ html {
 
 .best-ghibli {
 	min-height: 500px;
-	margin: 0;
+	margin: 0 auto 0;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 3px;
@@ -181,7 +283,7 @@ html {
 }
 
 .ghibli-box {
-	height: 450px;
+	height: 400px;
 	min-width: 300px;
 	position: relative;
 	background-size: cover;
@@ -191,30 +293,31 @@ html {
 }
 
 .ghibli-box:hover {
-	transform: scale(1.0000000000000000000000000000001);
+	transform: scale(1);
 	flex: 1;
-	z-index: 100000;
+	z-index: 2;
 }
 
 .ghibli-box:hover > .ghibli-details {
-	transition: all .5s;
 	color: #00AFF0;
+	letter-spacing: 5px;
+	transition: all .5s;
 }
 
 .ghibli1 {
-	background-image: url("../img/vignettes/setsuko.jpg");
+	background-image: url("../img/wallpapers/setsuko.jpg");
 }
 
 .ghibli2 {
-	background-image: url("../img/vignettes/ghibli2.jpg");
+	background-image: url("../img/wallpapers/marnieWoodCrop.jpg");
 }
 
 .ghibli3 {
-	background-image: url("../img/vignettes/Ghibli7.jpg");
+	background-image: url("../img/wallpapers/Chihiro_Among_Flowers.jpg");
 }
 
 .ghibli4 {
-	background-image: url("../img/vignettes/ghibli4v2.jpg");
+	background-image: url("../img/wallpapers/Howl.jpg");
 }
 
 .ghibli-details {
@@ -228,19 +331,36 @@ html {
 	font-size: 1.5rem;
 }
 
-.ghibli-details:hover {
-	transition: all .5s;
-	color: white;
-}
-
 .ghibli-name {
 	margin: .5rem;
-	letter-spacing: 3px;
 }
 
 .ghibli-movie-name {
 	font-size: 0.8rem;
 	letter-spacing: 2px;
+}
+
+/*_______________bouton-home_____________*/
+
+.bouton-home{
+	position:fixed;
+	bottom: 50px;
+	right: 50px;
+	height: 50px;
+	width: 50px;
+	border-radius: 100px;
+	border: none;
+	background: rgb(39,98,255);
+	background: linear-gradient(142deg, rgba(39,98,255,1) 0%, rgba(0,175,240,1) 32%, rgba(172,235,255,1) 100%);
+	z-index: 5;
+}
+
+.bouton-home > a {
+	height: 100;
+	width: 100%;
+	font-size: 30px;
+	color: white;
+	text-decoration: none;
 }
 
 /*________________footer________________*/
@@ -256,5 +376,4 @@ footer {
 footer a.cgv {
 	text-decoration: none;
 	color: black;
-
 }

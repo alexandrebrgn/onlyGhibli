@@ -9,23 +9,35 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="img/icons/nekobus-icon.png	">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
 	<script>
+		window.addEventListener("scroll", function () {
+			var element = document.getElementById("bouton-home");
+			var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+			var triggerPosition = window.innerHeight;
+
+			if (scrollPosition > triggerPosition) {
+				element.classList.add("visible");
+			} else {
+				element.classList.remove("visible");
+			}
+		});
 		window.addEventListener('scroll', function () {
 			var parallax = document.querySelector('.top-page');
 			var offsetY = window.pageYOffset;
 			parallax.style.backgroundPositionY = offsetY * -0.3 + 'px';
 		});
 	</script>
+
 </head>
 
 <body>
 	<div id="background">
 		<div class="top-page">
 			<header class="header">
-				<a href="index.html"><img src="img/logo.png"></a>
+				<a href="index.html"><img src="img/logo.png" alt="Logo du site"></a>
 				<nav class="navigation">
-					<li><a href="index.html">Accueil</a></li>
-					<li><a href="#best-items">Quelques images</a></li>
-					<li><a href="index2.html">Site 2</a></li>
+					<a href="#best-items">Quelques images</a>
+					<a href="ndex2.html">Site 2</a>
+					<a href="index.html">Accueil</a>
 				</nav>
 			</header>
 			<section class="landing-page">
@@ -36,18 +48,82 @@
 			</section>
 		</div>
 
+		<!-- <iframe title="ouais marnie" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3FhMEjOV2yXgPhu23AW0rE?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
+
 		<section class="service" id="service">
 			<div class="service-item">
-				<i class="fas fa-store delivery-icon"></i>
+				<i class="fas fa-store service-icon"></i>
 				<p class="service-text">Regarde cette belle devanture.</p>
 			</div>
 			<div class="service-item">
-				<i class="fas fa-star delivery-icon"></i>
+				<i class="fas fa-star service-icon"></i>
 				<p class="service-text">Tiens je te donne le colis.</p>
 			</div>
 			<div class="service-item">
-				<i class="fas 	fa-truck delivery-icon"></i>
+				<i class="fas fa-truck service-icon"></i>
 				<p class="service-text">La voiture qui livre.</p>
+			</div>
+		</section>
+
+
+
+		<section class="oeuvres" id="oeuvres">
+			<h2 class="section-title">
+				Quelques Oeuvres
+			</h2>
+			<div class="slider">
+				<div class="slide-track">
+					<div class="slide-element">
+						<h1 class="slide-element-titre">La Colline aux coquelicots <br> (2011)
+						</h1>
+						<img class="slide-affiche-film" src="img/test/ouais.jpg" alt="" height="300px">
+						<img class="imggg" src="img/test/test.jpg" alt="" height="450px" width="800px" />
+					</div>
+					<div class="slide-element">
+						<h1 class="slide-element-titre">Arrietty : Le Petit Monde
+							<br>des Chapardeurs<br>(2010)
+						</h1>
+						<img class="slide-affiche-film" src="img/test/R.jpg" alt="" height="300px">
+						<img src="img/test/test2.jpg" alt="" height="450px" width="800px" />
+					</div>
+					<div class="slide-element">
+						<h1 class="slide-element-titre">Le Château ambulant<br>(2004)
+						</h1>
+						<img class="slide-affiche-film" src="img/test/le-chateau-ambulant-1.jpg" alt="" height="300px">
+						<img src="img/test/test3.jpg" alt="" height="450px" width="800px" />
+					</div>
+					<div class="slide-element">
+						<h1 class="slide-element-titre">Le Tombeau des Lucioles<br>(1988)
+						</h1>
+						<img class="slide-affiche-film" src="img/test/R (1).jpg" alt="" height="300px">
+						<img src="img/test/test4.jpg" alt="" height="450px" width="800px" />
+					</div>
+					<div class="slide-element">
+						<h1 class="slide-element-titre">La Colline aux coquelicots <br> (2011)
+						</h1>
+						<img class="slide-affiche-film" src="img/test/ouais.jpg" alt="" height="300px">
+						<img class="imggg" src="img/test/test.jpg" alt="" height="450px" width="800px" />
+					</div>
+					<div class="slide-element">
+						<h1 class="slide-element-titre">Arrietty : Le Petit Monde
+							<br>des Chapardeurs<br>(2010)
+						</h1>
+						<img class="slide-affiche-film" src="img/test/R.jpg" alt="" height="300px">
+						<img src="img/test/test2.jpg" alt="" height="450px" width="800px" />
+					</div>
+					<div class="slide-element">
+						<h1 class="slide-element-titre">Le Château ambulant<br>(2004)
+						</h1>
+						<img class="slide-affiche-film" src="img/test/le-chateau-ambulant-1.jpg" alt="" height="300px">
+						<img src="img/test/test3.jpg" alt="" height="450px" width="800px" />
+					</div>
+					<div class="slide-element">
+						<h1 class="slide-element-titre">Le Tombeau des Lucioles<br>(1988)
+						</h1>
+						<img class="slide-affiche-film" src="img/test/R (1).jpg" alt="" height="300px">
+						<img src="img/test/test4.jpg" alt="" height="450px" width="800px" />
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -83,6 +159,11 @@
 				</a>
 			</div>
 		</section>
+		<button class="hidden bouton-home" id="bouton-home">
+			<a href="#" className=" text-center text-white text-2xl">
+				<i class="fas fa-arrow-up"></i>
+			</a>
+		</button>
 		<footer>
 			<p class="copyright">&copy; 2020 - OnlyGhibli</p>
 			<a href="html/cgv.html" class="cgv"> Condition générales de ventes</a>
