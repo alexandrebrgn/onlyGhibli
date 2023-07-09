@@ -223,12 +223,10 @@ html {
 
 .slide-element:hover > .slide-element-titre {
 	transform: scale(1.2);
-	transition: all .5s;	
 }
 
 .slide-element:hover > .slide-affiche-film {
 	transform: scale(1.1) rotate(10deg);
-	transition: all .5s;	
 }
 
 .slide-element-titre {
@@ -238,6 +236,7 @@ html {
 	top: 100px;
 	text-align: center;
 	filter: drop-shadow(5px 5px 4px black);
+	transition: all .5s;
 }
 
 .slide-affiche-film {
@@ -246,6 +245,7 @@ html {
 	top: 75px;
 	filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
 	border-radius: 10px;
+	transition: all .5s;
 }
 
 @keyframes scroll {
@@ -300,10 +300,21 @@ html {
 	z-index: 2;
 }
 
+.ghibli-box > .ghibli-details {
+	background-color: #FFFFFFAF;
+	width: 100%;
+	color: #000000;
+	position: absolute;
+	bottom: 0;
+	border-bottom: #00AFF0 solid 4px;
+	text-align: center;
+	font-size: 1.5rem;
+	transition: all .5s;
+}
+
 .ghibli-box:hover > .ghibli-details {
 	color: #00AFF0;
 	letter-spacing: 5px;
-	transition: all .5s;
 }
 
 .ghibli1 {
@@ -322,16 +333,6 @@ html {
 	background-image: url("../img/wallpapers/Howl.jpg");
 }
 
-.ghibli-details {
-	background-color: #FFFFFFAF;
-	width: 100%;
-	color: #000000;
-	position: absolute;
-	bottom: 0;
-	border-bottom: #00AFF0 solid 4px;
-	text-align: center;
-	font-size: 1.5rem;
-}
 
 .ghibli-name {
 	margin: .5rem;
