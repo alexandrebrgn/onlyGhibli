@@ -172,23 +172,25 @@ html {
 	margin: 40px;
 }
 
+
 .slider {
-	height: 450px;
+	height: 540px;
 	position: relative;
 	margin: auto;
 	overflow: hidden;
 	width: 100%;
 }
 
-.slider:hover > .slide-track{
+/* .slider:hover > .slide-track{
 	animation-play-state: paused;
-}
+} */
 
 .slide-track {
-	animation: scroll 10s linear infinite;
+	animation: scroll 60s linear infinite;
 	display: flex;
 	gap: 5px;
 	width: 100%;
+	position: relative;
 }
 
 .slider::before {
@@ -220,13 +222,13 @@ html {
 }
 
 .slide-element:hover > .slide-element-titre {
-	transition: all .5s;
-	transform: scale(1.2)
+	transform: scale(1.2);
+	transition: all .5s;	
 }
 
 .slide-element:hover > .slide-affiche-film {
 	transform: scale(1.1) rotate(10deg);
-	transition: all .5s;
+	transition: all .5s;	
 }
 
 .slide-element-titre {
