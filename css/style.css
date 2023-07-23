@@ -6,8 +6,13 @@
     src : url('../fonts/autumn-in-november/Autumn\ in\ November.ttf')
 }
 
+@font-face {
+    font-family: font2;
+    src : url('../fonts/bricolage_grotesque/fonts/variable/BricolageGrotesque\[opsz,wdth,wght\].ttf')
+}
+
 * {
-	font-family: "Montserrat", sans-serif;
+	font-family: "font2", sans-serif;
 	/* box-shadow: 0 0 0 1px red inset;  */
 }
 
@@ -23,11 +28,14 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
 	background-color: #FFFFFF;
-	;
 }
 
 html {
 	scroll-behavior: smooth;
+}
+
+section {
+	height: 100vh;
 }
 
 /*-----------------Fonctions générales-------------------*/
@@ -41,6 +49,11 @@ html {
 .visible {
 	opacity: 1;
 	visibility: visible;
+}
+
+.visible-intro {
+	opacity: 1 !important;
+	transform: translate(0) !important;
 }
 
 
@@ -82,21 +95,37 @@ html {
 
 .navigation {
 	margin-right: 80px;
-	width: 500px;
+	width: auto;
 	display: flex;
+	gap: 60px;
 	justify-content: space-between;
 	list-style: none;
 }
 
-.navigation a {
-	color: white;
+.navigation > a {
 	font-size: 20px;
+}
+
+.nav-element {
+	position: relative;
+	color: white;
 	text-decoration: none;
 	filter: drop-shadow(5px 5px 4px black);
 }
 
-.navigation a:hover {
-	text-decoration: underline;
+.nav-element::before {
+	position: absolute;
+	content: '';
+	width: 0%;
+	height: 2px;
+	top: 120%;
+	left: 0%;
+	background-color: white;
+	transition: .5s width;
+}
+
+.nav-element:hover::before{
+	width: 100%;
 }
 
 /*__________________GRAND TEXT_______________*/
@@ -121,9 +150,12 @@ html {
 }
 
 .landing-page .titre {
-	font-family: "Abril Fatface", sans-serif;
-	font-weight: 100;
+	font-family: "font2", sans-serif;
+	font-weight: 900;
 	filter: drop-shadow(10px 10px 20px black);
+	opacity: 0;
+	transform: translateY(100%);
+	animation: slideUp 1s ease-in-out forwards;
 }
 
 .middle-page {
@@ -132,41 +164,90 @@ html {
 }
 
 .OnlyGhibli {
-	font-family: "Abril Fatface", sans-serif;
-	font-weight: 100;
+	font-family: "font2", sans-serif;
+	font-weight: 900;
 	text-decoration: underline;
 }
 
-/*_______________SERVICES___________________________*/
+@keyframes slideUp {
+	0% {
+	opacity: 0;
+	transform: translateY(100%);
+	}
+	100% {
+    opacity: 1;
+	transform: translateY(0);
+	}
+}
 
-.service {
+/* _________________INTRO_______________ */
+
+.ghibli-intro {
+	margin: 40px;
+	/* background: url('../img/backgrounds/back2.jpg');
+	background-position: center;
+	background-size: cover; */
+	/* box-shadow: 0 0 0 1px rgb(3, 3, 3) inset;  */
+}
+
+.intro-container {
 	display: flex;
-	justify-content: space-between;
-	margin: 50px;
-	margin-bottom: 40px;
-	padding-top: 40px;
-	padding-left: 100px;
-	padding-right: 100px;
-	margin-top: 0;
+	gap: 5%;
+	justify-content: center;
+	height: auto;
+	/* box-shadow: 0 0 0 1px red inset; */
 }
 
-.service-item {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
+.intro-text {
+	flex: 1;
 }
 
-.service-text {
-	font-weight: 600;
-	text-align: center;
+.intro-texte {
+	position: relative;
+	font-family: "font2", sans-serif;
+	font-weight: 400;
 }
 
-.service-icon {
-	font-size: 40px;
-	color: #00AFF0;
+.intro-texte::selection {
+	background-color: #00b0f0;
 }
 
-/*_______________Oeuvres_________________*/
+.intro-texte-oeuvre {
+	text-decoration: underline;
+	font-weight: 400;
+	color: #00b0f0;
+}
+
+.selection::selection {
+	background-color: #00b0f0;
+	color: white
+}
+
+.intro-texte-colored {
+	font-weight: 400;
+	color: #00b0f0;
+}
+
+.hide-texte {
+	position :absolute;
+	height: 100%;
+	width: 100%;
+	background: red;
+	z-index: 100;
+}
+
+.intro-pic {
+	flex: 1;
+}
+
+.intro-pic img{
+	border-radius: 10px;
+	width: 100%;
+	display: block;
+}
+
+
+/*_______________OEUVRES_________________*/
 
 .oeuvres {
 	margin: 40px;
@@ -186,7 +267,7 @@ html {
 } */
 
 .slide-track {
-	animation: scroll 60s linear infinite;
+	animation: scroll 40s linear infinite;
 	display: flex;
 	gap: 5px;
 	width: 100%;
@@ -196,7 +277,7 @@ html {
 .slider::before {
 	position: absolute;
 	background: linear-gradient(to right,  rgb(255, 255, 255) 0%, transparent 100%);
-	content:"";
+	content: "";
 	height: 100%;
 	width: 5%;
 	top:0;
@@ -206,7 +287,7 @@ html {
 
 .slider::after {
 	position: absolute;
-	background: linear-gradient(to left,  rgb(255, 255, 255) 0%,rgba(255, 255, 255, 0) 100%);
+	/* background: linear-gradient(to left,  rgb(255, 255, 255) 0%,rgba(255, 255, 255, 0) 100%); */
 	content:"";
 	height: 100%;
 	width: 5%;
@@ -221,11 +302,11 @@ html {
 	border-radius: 10px;
 }
 
-.slide-element:hover > .slide-element-titre {
+.slide-element-top:hover > a > .slide-element-titre {
 	transform: scale(1.2);
 }
 
-.slide-element:hover > .slide-affiche-film {
+.slide-element-top:hover > a > .slide-affiche-film {
 	transform: scale(1.1) rotate(10deg);
 }
 
@@ -282,6 +363,7 @@ html {
 	flex-wrap: wrap;
 	gap: 3px;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .ghibli-box {
@@ -353,30 +435,82 @@ html {
 	width: 50px;
 	border-radius: 100px;
 	border: none;
-	background: rgb(39,98,255);
-	background: linear-gradient(142deg, rgba(39,98,255,1) 0%, rgba(0,175,240,1) 32%, rgba(172,235,255,1) 100%);
+	background: linear-gradient(142deg, rgb(0, 37, 138) 0%, rgb(1, 125, 170) 32%, rgb(69, 210, 253) 100%);
 	z-index: 5;
+	transition: all .5s;
 }
 
 .bouton-home > a {
 	height: 100;
 	width: 100%;
 	font-size: 30px;
-	color: white;
+	color: rgb(186, 186, 186);
 	text-decoration: none;
+	transition: all .2s;
 }
+
+.bouton-home:hover {
+	background: linear-gradient(142deg, rgba(39,98,255,1) 0%, rgba(0,175,240,1) 32%, rgba(172,235,255,1) 100%);
+}
+
+.bouton-home:hover > a {
+	color: white;
+	font-size: 35px;
+}
+
 
 /*________________footer________________*/
 
 footer {
+	height: 10vh;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 20px 100px;
+	padding: 20px 100px;
 	font-weight: 600;
+	background: black;
+}
+
+.icons-container {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 50%;
+}
+
+.icon-container { /* a */
+	position: relative;
+	margin: 0;
+	vertical-align: top;
+}
+
+.icon-container p { /* p */
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: opacity 0.5s;
+	color: white;
+}
+
+.icon-container-icon { /* icon */
+	color: white;
+	transition: box-shadow .5s;
+	box-shadow: 0 0 0 2px black inset;
+	padding: 10px;
+	border-radius: 100px;
+}
+
+.icon-container:hover > .icon-container-icon {
+	border-radius: 100px;
+	box-shadow: 0 0 0 2px white inset;
+}
+
+.icon-container:hover > p {
+	opacity: 1;
 }
 
 footer a.cgv {
 	text-decoration: none;
-	color: black;
+	color: white;
 }
