@@ -6,27 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>OnlyGhibli</title>
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="icon" type="image/png" sizes="16x16" href="img/icons/nekobus-icon.png	">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/icons/nekobus-icon.png">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
-	<script>
-		window.addEventListener("scroll", function () {
-			var element = document.getElementById("bouton-home");
-			var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-			var triggerPosition = window.innerHeight;
-
-			if (scrollPosition > triggerPosition) {
-				element.classList.add("visible");
-			} else {
-				element.classList.remove("visible");
-			}
-		});
-		window.addEventListener('scroll', function () {
-			var parallax = document.querySelector('.top-page');
-			var offsetY = window.pageYOffset;
-			parallax.style.backgroundPositionY = offsetY * -0.3 + 'px';
-		});
-	</script>
-
 </head>
 
 <body>
@@ -35,24 +16,23 @@
 			<header class="header">
 				<a href="index.html"><img src="img/logo.png" alt="Logo du site"></a>
 				<nav class="navigation">
-					<a class="nav-element" href="index.html">Accueil</a>
-					<a class="nav-element" href="#introduction">Présentation</a>
+					<!-- <a class="nav-element" href="index.html">Accueil</a> -->
+					<a class="nav-element" href="#introduction">Histoire</a>
+					<a class="nav-element" href="#oeuvres">Oeuvres marquantes</a>
 					<a class="nav-element" href="#best-items">Personnages emblématiques</a>
-					<a class="nav-element" href="index2.html">Site 2</a>
-					<a class="nav-element" href="tests.html">Tests</a>
 				</nav>
 			</header>
 			<div class="landing-page">
 				<div class="middle-page">
 					<h3 class="titre">
-						Bienvenue sur ma page
+						Bienvenue sur mon portfolio
 						<span class="OnlyGhibli">OnlyGhibli</span>
 					</h3>
 				</div>
-				<a class="scroller" href="#service">Scroll <i class="fas fa-angle-down"></i></a>
+				<a class="scroller" href="#introduction">Intro <i class="fas fa-angle-down"></i></a>
 			</div>
 		</div>
-		
+
 		<!-- ---------------------------------------------------------------------------------------------------------------------------------------- -->
 
 		<section class="ghibli-intro" id="introduction">
@@ -109,17 +89,22 @@
 				d'être apprécié dans le monde entier et les films des studios Ghibli ont acquis une place
 				spéciale dans l'histoire du cinéma d'animation.
 			</p>
-		</section>
+			</section>
 
 		<!-- ---------------------------------------------------------------------------------------------------------------------------------------- -->
 
 		<section class="oeuvres" id="oeuvres">
 			<h2 class="section-title">
 				Mes Oeuvres Favorites
+				<div class="section-title-button">
+					<button class="slider-pause">
+					<div class="play-icon icon-hidden"><i class="play-icon fas fa-play"></i></div>
+					<div class="pause-icon"><i class="pause-icon fas fa-pause"></i></div>
+					</button>
+				</div>
 			</h2>
 			<div class="slider">
 				<div class="slide-track">
-
 					<div class="slide-element">
 						<div class="slide-element-top">
 							<a href="fuoph.html">
@@ -140,16 +125,33 @@
 					<div class="slide-element">
 						<div class="slide-element-top">
 							<a href="#">
-								<h1 class="slide-element-titre">Arrietty : Le Petit Monde
-									<br>des Chapardeurs<br>(2010)
+								<h1 class="slide-element-titre">Le voyage de chihiro<br>(2014)
 								</h1>
-								<img class="slide-affiche-film" src="img/test/R.jpg" alt="" height="300px">
-								<img src="img/test/test2.jpg" alt="" height="450px" width="800px" />
+								<img class="slide-affiche-film" src="img/test/saaffiche.jpg" alt="" height="300px">
+								<img src="img/test/sa.jpg" alt="" height="450px" width="800px" />
 							</a>
 						</div>
 						<div class="slide-element-bot">
 							<iframe style="border-radius:12px"
-								src="https://open.spotify.com/embed/album/0ldESLoQyyP80ynVU2gych?utm_source=generator"
+								src="https://open.spotify.com/embed/playlist/28KAvkay9oJnpYrnBW2DFx?utm_source=generator"
+								width="100%" height="auto" frameBorder="0"
+								allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+								loading="lazy"></iframe>
+						</div>
+					</div>
+
+					<div class="slide-element">
+						<div class="slide-element-top">
+							<a href="#">
+								<h1 class="slide-element-titre">Souvenirs de Marnie<br>(2014)
+								</h1>
+								<img class="slide-affiche-film" src="img/test/wmwtaffiche.jpg" alt="" height="300px">
+								<img src="img/test/wmwt.jpg" alt="" height="450px" width="800px" />
+							</a>
+						</div>
+						<div class="slide-element-bot">
+							<iframe style="border-radius:12px"
+								src="https://open.spotify.com/embed/playlist/3FhMEjOV2yXgPhu23AW0rE?utm_source=generator"
 								width="100%" height="auto" frameBorder="0" allowfullscreen=""
 								allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
 								loading="lazy"></iframe>
@@ -180,8 +182,8 @@
 							<a href="#">
 								<h1 class="slide-element-titre">Le Tombeau des Lucioles<br>(1988)
 								</h1>
-								<img class="slide-affiche-film" src="img/test/R (1).jpg" alt="" height="300px">
-								<img src="img/test/test4.jpg" alt="" height="450px" width="800px" />
+								<img class="slide-affiche-film" src="img/test/gotfaffiche.jpg" alt="" height="300px">
+								<img src="img/test/gotf.jpg" alt="" height="450px" width="800px" />
 							</a>
 						</div>
 						<div class="slide-element-bot">
@@ -213,16 +215,33 @@
 					<div class="slide-element">
 						<div class="slide-element-top">
 							<a href="#">
-								<h1 class="slide-element-titre">Arrietty : Le Petit Monde
-									<br>des Chapardeurs<br>(2010)
+								<h1 class="slide-element-titre">Le voyage de chihiro<br>(2014)
 								</h1>
-								<img class="slide-affiche-film" src="img/test/R.jpg" alt="" height="300px">
-								<img src="img/test/test2.jpg" alt="" height="450px" width="800px" />
+								<img class="slide-affiche-film" src="img/test/saaffiche.jpg" alt="" height="300px">
+								<img src="img/test/sa.jpg" alt="" height="450px" width="800px" />
 							</a>
 						</div>
 						<div class="slide-element-bot">
 							<iframe style="border-radius:12px"
-								src="https://open.spotify.com/embed/album/0ldESLoQyyP80ynVU2gych?utm_source=generator"
+								src="https://open.spotify.com/embed/playlist/28KAvkay9oJnpYrnBW2DFx?utm_source=generator"
+								width="100%" height="auto" frameBorder="0"
+								allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+								loading="lazy"></iframe>
+						</div>
+					</div>
+
+					<div class="slide-element">
+						<div class="slide-element-top">
+							<a href="#">
+								<h1 class="slide-element-titre">Souvenirs de Marnie<br>(2014)
+								</h1>
+								<img class="slide-affiche-film" src="img/test/wmwtaffiche.jpg" alt="" height="300px">
+								<img src="img/test/wmwt.jpg" alt="" height="450px" width="800px" />
+							</a>
+						</div>
+						<div class="slide-element-bot">
+							<iframe style="border-radius:12px"
+								src="https://open.spotify.com/embed/playlist/3FhMEjOV2yXgPhu23AW0rE?utm_source=generator"
 								width="100%" height="auto" frameBorder="0" allowfullscreen=""
 								allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
 								loading="lazy"></iframe>
@@ -253,8 +272,8 @@
 							<a href="#">
 								<h1 class="slide-element-titre">Le Tombeau des Lucioles<br>(1988)
 								</h1>
-								<img class="slide-affiche-film" src="img/test/R (1).jpg" alt="" height="300px">
-								<img src="img/test/test4.jpg" alt="" height="450px" width="800px" />
+								<img class="slide-affiche-film" src="img/test/gotfaffiche.jpg" alt="" height="300px">
+								<img src="img/test/gotf.jpg" alt="" height="450px" width="800px" />
 							</a>
 						</div>
 						<div class="slide-element-bot">
@@ -265,9 +284,29 @@
 								loading="lazy"></iframe>
 						</div>
 					</div>
+				
 				</div>
 			</div>
 		</section>
+
+		<!-- ----------------------------------------------------------------------------------------------- -->
+
+		<!-- <section class="oeuvres" id="affiches">
+			<h2 class="section-title">
+				Time line de Ghibli
+			</h2>
+			<h1>ouais</h1>
+			<div class="affiches-container">
+				<img class="affiches-element affiche-chihiro" src="img/test/saaffiche.jpg"/>
+				<img class="affiches-element affiche-gotf" src="img/test/gotfaffiche.jpg"/>
+				<div class="affiches-element affiche-howl">
+					<img src="img/test/le-chateau-ambulant-1.jpg" width="250"/>
+				</div>
+				<img class="affiches-element affiche-fuoph" src="img/test/fuoph.jpg"/>
+				<img class="affiches-element affiche-marnie" src="img/test/wmwtaffiche.jpg"/>
+				<img class="affiches-element affiche-arrietty" src="img/test/arrietty.jpg"/>
+			</div>
+		</section> -->
 
 		<!-- ---------------------------------------------------------------------------------------------------------------------------------------- -->
 
@@ -282,7 +321,7 @@
 						<p class="ghibli-movie-name">Le Tombeau des Lucioles</p>
 					</div>
 				</a>
-				<a href="html/attachement-2.html " class="ghibli-box ghibli2">
+				<a href="html/attachement-2.html" class="ghibli-box ghibli2">
 					<div class="ghibli-details">
 						<p class="ghibli-name">MARNIE</p>
 						<p class="ghibli-movie-name">Souvenirs de Marnie</p>
@@ -313,10 +352,22 @@
 		<footer>
 			<p class="copyright" style="color: white;">&copy; 2021 - OnlyGhibli</p>
 			<div class="icons-container">
-				<a class="icon-container" href="https://github.com/alexandrebrgn" target="_blank"><ion-icon class="icon-container-icon" name="logo-github" size="large"></ion-icon><p class="github" style="margin:0; padding: 0;">GitHub</p></a>
-				<a class="icon-container" href="https://vercel.com/dashboard" target="_blank"><ion-icon class="icon-container-icon" name="logo-vercel" size="large"></ion-icon><p class="vercel" style="margin:0; padding: 0;">Vercel</p></a>
-				<a class="icon-container" href="https://twitter.com" target="_blank"><ion-icon class="icon-container-icon" name="logo-twitter" size="large"></ion-icon><p class="twitter" style="margin:0; padding: 0;">Twitter</p></a>
-				<a class="icon-container" href="https://www.instagram.com/alex.brgn/" target="_blank"><ion-icon class="icon-container-icon" name="logo-instagram" size="large"></ion-icon><p class="instagram" style="margin:0; padding: 0;">Instagram</p></a>
+				<a class="icon-container" href="https://github.com/alexandrebrgn" target="_blank"><ion-icon
+						class="icon-container-icon" name="logo-github" size="large"></ion-icon>
+					<p class="github" style="margin:0; padding: 0;">GitHub</p>
+				</a>
+				<a class="icon-container" href="https://vercel.com/dashboard" target="_blank"><ion-icon
+						class="icon-container-icon" name="logo-vercel" size="large"></ion-icon>
+					<p class="vercel" style="margin:0; padding: 0;">Vercel</p>
+				</a>
+				<a class="icon-container" href="https://twitter.com" target="_blank"><ion-icon
+						class="icon-container-icon" name="logo-twitter" size="large"></ion-icon>
+					<p class="twitter" style="margin:0; padding: 0;">Twitter</p>
+				</a>
+				<a class="icon-container" href="https://www.instagram.com/alex.brgn/" target="_blank"><ion-icon
+						class="icon-container-icon" name="logo-instagram" size="large"></ion-icon>
+					<p class="instagram" style="margin:0; padding: 0;">Instagram</p>
+				</a>
 			</div>
 			<a href="html/cgv.html" class="cgv nav-element"> Condition d'utiliation</a>
 		</footer>
@@ -325,4 +376,45 @@
 	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
+<script>
+	window.addEventListener("scroll", function () {
+		var element = document.getElementById("bouton-home");
+		var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+		var triggerPosition = window.innerHeight;
+
+		if (scrollPosition > triggerPosition) {
+			element.classList.add("visible");
+		} else {
+			element.classList.remove("visible");
+		}
+	});
+	window.addEventListener('scroll', function () {
+		var parallax = document.querySelector('.top-page');
+		var offsetY = window.pageYOffset;
+		parallax.style.backgroundPositionY = offsetY * -0.3 + 'px';
+	});
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+		var pauseIcon = document.querySelector('.pause-icon');
+		var playIcon = document.querySelector('.play-icon');
+        var pauseButton = document.querySelector('.slider-pause');
+        var slideTrack = document.querySelector('.slide-track');
+        var animationPaused = false;
+
+        pauseButton.addEventListener('click', function () {
+            if (animationPaused) {
+				playIcon.classList.add('icon-hidden');
+				pauseIcon.classList.remove('icon-hidden');
+                slideTrack.style.animationPlayState = 'running';
+			} else { 
+				pauseIcon.classList.add('icon-hidden');
+				playIcon.classList.remove('icon-hidden');
+                slideTrack.style.animationPlayState = 'paused';
+			}
+            animationPaused = !animationPaused;
+        });
+    });
+</script>
 </html>
